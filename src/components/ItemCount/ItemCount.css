@@ -1,0 +1,40 @@
+.itemCount {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 5px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.itemCountQuantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemCountQuantity p {
+    width: 100%;
+    padding: 5px;
+    border: solid 1px rgb(139, 139, 139);
+}
+
+.itemCountQuantity button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 5px 20px;
+    border: none;
+    background-color: #232f3e;
+    color: white;
+}
+
+.itemCountButtonAdd {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    background-color: white;
+    color: #232f3e;
+    font-weight: 600;
+    border: solid 1px #232f3e;
+    border-radius: 3px;
+}
