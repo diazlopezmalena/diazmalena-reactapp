@@ -29,6 +29,10 @@
     color: white;
 }
 
+.itemCountQuantity button:disabled {
+    background-color: #232f3e94;
+}
+
 .itemCountButtonAdd {
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
