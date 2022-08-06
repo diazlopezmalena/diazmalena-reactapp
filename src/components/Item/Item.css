@@ -1,12 +1,13 @@
 .productCard {
     width: 200px;
-    height: 300px;
+    height: 350px;
     background-color: white;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content:flex-start;
     align-items: center;
+    gap: 13px;
     position: relative;
     box-shadow: rgb(132, 132, 132) 0 0 5px;
 }
@@ -40,7 +41,7 @@
 }
 
 .productCardDescription h3 {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .productCardDescription h4 {
@@ -48,15 +49,25 @@
     font-weight: normal;
 }
 
-.productCardDescription p {
+.productCardDescription .productCardDescriptionPrice {
     font-size: 16px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.productCardDescription button {
+.productCardDescription .productCardDescriptionStock {
+    font-size: 13px;
+    border: solid 1px grey;
+    width: 50%;
+    align-self: center;
+    position: absolute;
+    bottom: 40px;
+}
+
+.productCardDescription .seeDetail {
     width: 100%;
     padding: 10px 0px;
-    border: none;
+    text-decoration: none;
     border-radius: 0 0 5px 5px;
     background-color: #232f3e;
     color: white;
@@ -64,4 +75,5 @@
     bottom: 0px;
     right: 0px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
