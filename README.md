@@ -2,7 +2,7 @@
 
 Este proyecto realizado con React es un e-commerce de libros, con géneros disponibles como Ficción, Crónicas y Ensayos.
 
-Su nombre es "Adorno" porque así se llama el gato de Julio Cortázar, en referencia a uno de los máximos representates de la escuela de Fráncfor: Theodor Adorno (Filósofo).
+Su nombre es "Adorno" porque así se llamó el gato de Julio Cortázar, en referencia a uno de los máximos representates de la escuela de Fráncfor: Theodor Adorno (Filósofo).
 
 ![Logo](https://i.ibb.co/RPCySdC/logo-Adorno.png)
 
@@ -41,7 +41,8 @@ Las rutas se encuentran configuradas en App.js con react-router-dom
 
 ## Demo - Gif
 
-https://imgur.com/gallery/2iNCtDM
+- https://imgur.com/a/2iNCtDM
+- o dentro del directorio: public > images > Malena-Diaz-gif-navegacion.gif
 
 ## Authors
 
