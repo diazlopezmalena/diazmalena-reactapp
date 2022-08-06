@@ -14,7 +14,6 @@ img {
     justify-content: space-between;
     align-items: center;
     background-color: #232f3e;
-    color: white;
 }
 
 .navbarLogo {
@@ -27,12 +26,16 @@ img {
     width: 70px;
     margin-right: 10px;
 }
-
+.navbarLogoText a {
+    text-decoration: none;
+}
 .navbarLogoText h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 20px;
+    color: white;
+    text-decoration: none;
 }
 
 .navbarLogoText h2 {
@@ -41,6 +44,7 @@ img {
     font-weight: 300;
     font-size: 12px;
     letter-spacing: 2px;
+    color: white;
 }
 
 .navbarMenu {
@@ -51,12 +55,14 @@ img {
     width: 22%;
 }
 
-.navbarMenu button {
+.navbarMenu a {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: transparent;
     border: none;
     border-bottom: solid 1.5px;
     line-height: 2;
+    text-decoration: none;
+    font-size: 15px;
 }
 

@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# E-commerce: "Adorno Bookstore"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto realizado con React es un e-commerce de libros, con géneros disponibles como Ficción, Crónicas y Ensayos.
 
-## Available Scripts
+Su nombre es "Adorno" porque así se llama el gato de Julio Cortázar, en referencia a uno de los máximos representates de la escuela de Fráncfor: Theodor Adorno (Filósofo).
 
-In the project directory, you can run:
+![Logo](https://i.ibb.co/RPCySdC/logo-Adorno.png)
 
-### `npm start`
+## Run Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+  git clone https://github.com/diazlopezmalena/diazmalena-reactapp
+```
 
-### `npm test`
+Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  npm install
+```
 
-### `npm run build`
+Start the server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Routes
 
-### `npm run eject`
+Las rutas se encuentran configuradas en App.js con react-router-dom
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. La ruta por defecto '/' todos los productos a través del componente ItemListContainer.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. La ruta dinámica '/category/:categoryId' muestra los productos filtrados (a través del componente ItemListContainer) de acuerdo a la categoría, en este caso secciones 'ficcion', 'cronicas' o 'ensayos', a los que se accede clickeando sobre los Links del componente Navbar.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. La ruta dinámica '/detail/:id' muestra el detalle de cada producto (a través del componente ItemDetailContainer), al que se accede clickenado en "Ver detalles" dentro de la card de cada producto.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. La ruta '*' devuelve un Error 404 cuando se ingresa una ruta no existente.
 
-## Learn More
+## Demo - Gif
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://imgur.com/gallery/2iNCtDM
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
 
-### Code Splitting
+[@diazlopezmalena](https://github.com/diazlopezmalena)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Aditional
 
-### Analyzing the Bundle Size
+Detalle de Links configurados:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Al clickear en el brand se navega a '/'.
+- Al Clickear en el Link "Ver detalle" de un Item.js se navega a '/detail/:id'.
+- Al clickear en una categoría del navbar se navega a '/category/:categoryId'.

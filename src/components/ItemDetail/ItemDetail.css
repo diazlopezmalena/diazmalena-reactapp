@@ -1,0 +1,52 @@
+.itemDetail {
+    margin: 30px 150px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "img text";
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Montserrat', sans-serif;
+    gap: 50px;
+}
+
+.itemDetailImg {
+    grid-area: img;
+    height: 400px;
+}
+
+.itemDetailImg img {
+    max-height: 100%;
+    min-height: 100%;
+    box-shadow: 0px 0px 10px black;
+}
+
+.itemDetailText {
+    min-height: 100%;
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.itemDetailCategory {
+    background-color: #607ec9;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px 0 15px 0;
+    box-shadow: 0px 0px 10px rgb(160, 160, 160);
+}
+
+
+
+.bttnAddCart {
+    width: 50%;
+    padding: 10px 0px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #232f3e;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}

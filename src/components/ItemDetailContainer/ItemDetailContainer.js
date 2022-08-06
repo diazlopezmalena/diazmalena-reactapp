@@ -5,10 +5,6 @@ import { getProductById } from '../../asyncMock'
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-    //Recibir productos - llamada API UseEffect 
-    //Guardarlos en un estado - Se actualiza con el click del user - useState
-    //Funcion que .find el id que clickeó el usuario y retorna el ItemDetail
-
     const [productId, setProductsId ] = useState([])
 
     const {id} = useParams()
