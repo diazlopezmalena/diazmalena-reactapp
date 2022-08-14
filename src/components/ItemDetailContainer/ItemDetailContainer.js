@@ -5,7 +5,8 @@ import { getProductById } from '../../asyncMock'
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-    const [productId, setProductsId ] = useState([])
+    const [productId, setProductsId ] = useState({})
+    const [loading, setLoading] = useState(true)
 
     const {id} = useParams()
 
@@ -13,7 +14,13 @@ const ItemDetailContainer = () => {
         getProductById(id)
         .then(producto => setProductsId(producto))
         .catch(error => console.log(error))
+        .finally(()=>setLoading(false))
     }, [])
+
+
+    if (loading) {
+        return <h2 className='loading'>Cargando...</h2>
+    }
 
     return (
         <div>

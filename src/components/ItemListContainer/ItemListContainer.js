@@ -8,7 +8,6 @@ const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([])
 
     const { categoryId } = useParams()
-    console.log(categoryId)
 
     useEffect(()=>{
         if (!categoryId) {
@@ -25,7 +24,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <div className='itemListContainer'>
-            <h3>{greeting}</h3>
+            <h3>{greeting = categoryId ? categoryId : greeting}</h3>
             <ItemList products={products}/>
         </div>
     )

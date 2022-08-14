@@ -64,52 +64,6 @@ const products = [
         stock: 15,
         category: 'ensayos',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in ipsum dolor. Sed elementum nulla vel mauris lobortis ullamcorper ac non mi. Donec ipsum mi, venenatis vel bibendum vel, ullamcorper vel massa. Donec consectetur ornare est. In diam justo, facilisis quis consectetur in, vestibulum quis lacus. Ut varius erat nec sollicitudin pulvinar. In fringilla velit id mauris mollis, eget efficitur dolor ultrices.'
-    },
-
-    //Luego modificaré contenido
-    {
-        id: '7',
-        name: 'El fin del amor',
-        author: 'Tamara Tenembaum',
-        price: 2500,
-        picture: 'https://i.ibb.co/2ZT91Rn/portada-el-fin-del-amor-tamara-tenenbaum.jpg',
-        alt: 'Portada de El fin del amor',
-        stock: 15,
-        category: 'ensayos',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in ipsum dolor. Sed elementum nulla vel mauris lobortis ullamcorper ac non mi. Donec ipsum mi, venenatis vel bibendum vel, ullamcorper vel massa. Donec consectetur ornare est. In diam justo, facilisis quis consectetur in, vestibulum quis lacus. Ut varius erat nec sollicitudin pulvinar. In fringilla velit id mauris mollis, eget efficitur dolor ultrices.'
-    },
-    {
-        id: '8',
-        name: 'Cuando me muera quiero que...',
-        author: 'Cristina Alarcón',
-        price: 2500,
-        picture: 'https://i.ibb.co/jzz8sx7/portada-cuando-me-muera-quiero-que-me-toquen-cumbia.jpg',
-        alt: 'Portada del libro Cuando me muera quiero que me toquen cumbia',
-        stock: 10,
-        category: 'cronicas',
-        description: 'Descripción de Cuando me muera quiero que me toquen cumbia'
-    },
-    {
-        id: '9',
-        name: 'Los amantes de Estocolmo',
-        author: 'Prueba2',
-        price: 3000,
-        picture: 'https://i.ibb.co/YddLnym/portada-los-amantes-de-estocolmo.jpg',
-        alt: 'Portada de Los amantes de Estocolmo',
-        stock: 5,
-        category: 'ficcion',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in ipsum dolor. Sed elementum nulla vel mauris lobortis ullamcorper ac non mi. Donec ipsum mi, venenatis vel bibendum vel, ullamcorper vel massa. Donec consectetur ornare est. In diam justo, facilisis quis consectetur in, vestibulum quis lacus. Ut varius erat nec sollicitudin pulvinar. In fringilla velit id mauris mollis, eget efficitur dolor ultrices.'
-    },
-    {
-        id: '10',
-        name: 'Derivas para una Psicología Social',
-        author: 'Juan Evangelista Díaz',
-        price: 3000,
-        picture: 'https://i.ibb.co/0rX1Yxs/portada-derivas-para-una-psicologia-social.jpg',
-        alt: 'Portada de Derivas para una Psicología Social',
-        stock: 15,
-        category: 'ensayos',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in ipsum dolor. Sed elementum nulla vel mauris lobortis ullamcorper ac non mi. Donec ipsum mi, venenatis vel bibendum vel, ullamcorper vel massa. Donec consectetur ornare est. In diam justo, facilisis quis consectetur in, vestibulum quis lacus. Ut varius erat nec sollicitudin pulvinar. In fringilla velit id mauris mollis, eget efficitur dolor ultrices.'
     }
 ]
 
@@ -123,7 +77,7 @@ export const getProductsByCategory = (categoryId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.filter(product => product.category === categoryId))
-        }, 500)
+        }, 10)
     })
 }
 
@@ -131,7 +85,7 @@ export const getProductById = (id) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(product => product.id === id))
-        }, 10)
+        }, 500)
     })
 }
 
