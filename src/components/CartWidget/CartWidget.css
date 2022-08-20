@@ -4,6 +4,10 @@
     margin-top: 8px;
 }
 
+.cartWidget a {
+    border: none;
+}
+
 .cartWidget span {
     position: absolute;
     left: 23px;

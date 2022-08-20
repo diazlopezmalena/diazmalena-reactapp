@@ -1,22 +1,26 @@
 import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useState, useEffect } from 'react'
-import { getProductById } from '../../asyncMock'
 import { useParams } from 'react-router-dom'
+import { getDoc, doc } from 'firebase/firestore'
+import { dataBase } from '../../services/firebase'
 
 const ItemDetailContainer = () => {
     const [productId, setProductsId ] = useState({})
     const [loading, setLoading] = useState(true)
 
-    const {id} = useParams()
+    const { id } = useParams()
 
     useEffect(()=>{
-        getProductById(id)
-        .then(producto => setProductsId(producto))
+        getDoc(doc(dataBase, 'products', id))
+        .then(response => {
+            const data = response.data()
+            const dataProductAdapted = { id: response.id, ...data }
+            setProductsId(dataProductAdapted)
+        })
         .catch(error => console.log(error))
         .finally(()=>setLoading(false))
-    }, [])
-
+    }, [id])
 
     if (loading) {
         return <h2 className='loading'>Cargando...</h2>

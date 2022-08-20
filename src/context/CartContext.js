@@ -48,7 +48,12 @@ export const CartContextProvider = ({ children }) => {
             acumulador += item.quantity
         });
 
-        return acumulador
+        if (acumulador === 0) {
+            let emptyCart = '🤍';
+            return emptyCart
+        } else { 
+            return acumulador
+        }
     }
 
     return (

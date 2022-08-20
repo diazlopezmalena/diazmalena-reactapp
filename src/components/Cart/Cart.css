@@ -1,0 +1,79 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    gap: 20px;
+    text-align: start;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.itemInCart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "name quantity price delete";
+    align-items: center;
+    box-shadow: rgb(186, 186, 186) 0px 0px 5px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+.itemInCartName {
+    grid-area: name;
+}
+
+.itemInCartQuantity {
+    grid-area: quantity;
+}
+
+.itemInCartPrice {
+    grid-area: price;
+}
+
+.itemInCartDelete {
+    grid-area: delete;
+    text-align: end;
+    border: none;
+    background-color: transparent;
+    height: 30px;
+}
+
+.itemInCartDelete img {
+    max-height: 100%;
+    transition: 300ms;
+}
+
+.itemInCartDelete img:hover {
+    transform: scale(1.2) rotateZ(10deg);
+    transition: 300ms;
+    border-radius: 100px;
+    box-shadow: grey 0px 0px 5px;
+}
+
+.itemInCartName span {
+    display: block;
+}
+
+.cartTotal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "text . price .";
+    align-items: flex-start;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.cartTotalText {
+    grid-area: text;
+}
+
+.cartTotalNumber {
+    grid-area: price;
+}
