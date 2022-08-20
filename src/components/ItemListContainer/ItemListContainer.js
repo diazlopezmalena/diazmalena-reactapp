@@ -26,6 +26,8 @@ const ItemListContainer = ({ greeting }) => {
         .catch(error => console.log(error))
         .finally(() => setLoading(false))
     }, [categoryId])
+    
+    const categoryH1 = products[0]?.categoryTitle;
 
     if(loading) {
         return <h3 className='loading'>Cargando...</h3>
@@ -33,7 +35,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <div className='itemListContainer'>
-            <h3>{greeting = categoryId ? categoryId : greeting}</h3>
+            <h3>{greeting = categoryId ? categoryH1 : greeting}</h3>
             <ItemList products={products}/>
         </div>
     )

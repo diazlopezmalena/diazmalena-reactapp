@@ -30,9 +30,9 @@ const Cart = () => {
 
     const goToShop = () => {
         return (
-            <div>
+            <div className='emptyCart'>
                 <p>Tu carrito está vacío 📖💔</p>
-                <Link to='/'>Ir a la tienda</Link>
+                <Link to='/' className='emptyCartButton'>Ir a la tienda</Link>
             </div>
         )
     }
@@ -44,7 +44,10 @@ const Cart = () => {
                     <p className='cartTotalText'>Total:</p> 
                     <p className='cartTotalNumber'>${totalCart()}</p>
                 </div>
-                <button onClick={() => clearCart()}>Limpiar carrito</button>
+                <div className='cartButton'>
+                    <button onClick={() => clearCart()} className='cartButtonClean'>Limpiar carrito</button>
+                    <button className='cartButtonBuy'>Continuar compra</button>
+                </div>
             </>
         )
     }
