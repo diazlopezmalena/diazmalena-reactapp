@@ -1,0 +1,35 @@
+.title {
+    margin: 30px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.orderCreated {
+    margin-top: 100px;
+    padding: 0 10%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.orderCreated h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.orderCreated p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #607ec9;
+    margin: 15px 0;
+}
+
+.orderCreated div {
+    width: 50px;
+    align-self: center;
+}
+
+.orderCreated div img {
+    max-width: 100%;
+}

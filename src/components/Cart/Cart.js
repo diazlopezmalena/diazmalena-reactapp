@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
-    const { cart, removeProduct, clearCart } = useContext(CartContext)
-
+    const { cart, removeProduct, clearCart, totalCart, goToShop } = useContext(CartContext)
+    
     const mapCart = cart.map(item => {
         return (
             <div key={item.id} className='itemInCart'>
@@ -18,35 +18,18 @@ const Cart = () => {
         )
     })
 
-    const totalCart = () => {
-        let total = 0;
-
-        cart.forEach(element => {
-            total += element.price*element.quantity;
-        });
-
-        return total
-    }    
-
-    const goToShop = () => {
-        return (
-            <div className='emptyCart'>
-                <p>Tu carrito está vacío 📖💔</p>
-                <Link to='/' className='emptyCartButton'>Ir a la tienda</Link>
-            </div>
-        )
-    }
+    const total = totalCart()
 
     const finishBuy = () => {
         return (
             <>
                 <div className='cartTotal'>
                     <p className='cartTotalText'>Total:</p> 
-                    <p className='cartTotalNumber'>${totalCart()}</p>
+                    <p className='cartTotalNumber'>${total}</p>
                 </div>
                 <div className='cartButton'>
                     <button onClick={() => clearCart()} className='cartButtonClean'>Limpiar carrito</button>
-                    <button className='cartButtonBuy'>Continuar compra</button>
+                    <Link to='/checkout' className='cartButtonBuy'>Continuar compra</Link>
                 </div>
             </>
         )

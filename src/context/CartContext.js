@@ -1,4 +1,5 @@
 import { useState, createContext } from "react"
+import { Link } from 'react-router-dom'
 
 const CartContext = createContext()
 
@@ -56,8 +57,27 @@ export const CartContextProvider = ({ children }) => {
         }
     }
 
+    const totalCart = () => {
+        let total = 0;
+
+        cart.forEach(element => {
+            total += element.price*element.quantity;
+        });
+
+        return total
+    }
+
+    const goToShop = () => {
+        return (
+            <div className='emptyCart'>
+                <p>Tu carrito está vacío 📖💔</p>
+                <Link to='/' className='emptyCartButton'>Ir a la tienda</Link>
+            </div>
+        )
+    }
+
     return (
-        <CartContext.Provider value={{cart, addProductToCart, count, removeProduct, clearCart, quantityProduct }}>
+        <CartContext.Provider value={{cart, addProductToCart, count, removeProduct, clearCart, quantityProduct, totalCart, goToShop }}>
             {children}
         </CartContext.Provider>
     )
