@@ -1,8 +1,22 @@
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const Navbar = () => {
+
+    const [ menuMobile, setMenuMobile ] = useState('none')
+    const [ closeMenuMobile, setCloseMenuMobile ] = useState('../images/menu.png')
+
+    const showMenuHamburger = () => {
+        if (menuMobile === 'none') {
+            setMenuMobile('flex')
+            setCloseMenuMobile('../images/cerrar.png')
+        } else {
+            setMenuMobile('none')
+            setCloseMenuMobile('../images/menu.png')
+        }
+    }
 
     return (
         <nav className='navbar'> 
@@ -20,6 +34,15 @@ const Navbar = () => {
                 <Link to='/category/cronicas'>Crónicas</Link>
                 <Link to='/category/ensayos'>Ensayos</Link>
                 <CartWidget />
+            </div>
+            <div className='navbarMenuMobile' >
+                <img src={closeMenuMobile} alt='Menú hamburguesa' onClick={()=>showMenuHamburger()}/>
+                <div className='navbarMenuMobileContent' style={{display: menuMobile}}>
+                    <Link to='/category/ficcion'>Ficción</Link>
+                    <Link to='/category/cronicas'>Crónicas</Link>
+                    <Link to='/category/ensayos'>Ensayos</Link>
+                    <CartWidget />
+                </div>
             </div>
         </nav>
     )

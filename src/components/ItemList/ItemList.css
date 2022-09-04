@@ -7,3 +7,9 @@
     gap: 30px;
     padding: 0 40px;
 }
+
+@media screen and (max-width:970px) {
+    .itemsContainer {
+        width: 100%;
+    }
+}

@@ -52,10 +52,10 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 22%;
+    width: 27%;
 }
 
-.navbarMenu a {
+.navbarMenu a, .navbarMenuMobile a {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: transparent;
@@ -64,5 +64,42 @@ img {
     line-height: 2;
     text-decoration: none;
     font-size: 15px;
+}
+
+.navbarMenuMobile {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .navbarMenu {
+        display: none;
+    }
+
+    .navbarMenuMobile {
+        display: block;
+        position: relative;
+    }
+
+    .navbarMenuMobileContent {
+        position: absolute;
+        top: 200%;
+        right: 0px;
+        width: 250px;
+        border-radius: 5px;
+        background-color: #232f3e;
+        z-index: 10;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbarMenuMobileContent a {
+        width: 90%;
+    }
+
+    .navbarMenuMobile img {
+        margin-right: 5px;
+    }
 }
 
