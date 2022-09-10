@@ -19,7 +19,7 @@ const Checkout = () => {
     const totalQuantity = count()
 
     const createOrder = async (name, lastname, email, phone) => {
-        try { 
+        try {
             const order = {
                 customer: {
                     name,
@@ -33,11 +33,11 @@ const Checkout = () => {
                 date: new Date()
             }
             const ids = cart.map(prod => prod.id)
-        
+
             const productsRef = collection(dataBase, 'products')
 
             const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), 'in', ids)))
-            
+
             const { docs } = productsAddedFromFirestore
 
             const outOfStock = []
@@ -51,14 +51,14 @@ const Checkout = () => {
                 const productAddedToCart = cart.find(prod => prod.id === doc.id)
                 const prodQuantity = productAddedToCart?.quantity
 
-                if(stockDb >= prodQuantity) {
-                    batch.update(doc.ref, { stock: stockDb - prodQuantity})
+                if (stockDb >= prodQuantity) {
+                    batch.update(doc.ref, { stock: stockDb - prodQuantity })
                 } else {
-                    outOfStock.push({ id: doc.id, ...dataDoc})
+                    outOfStock.push({ id: doc.id, ...dataDoc })
                 }
             })
 
-            if(outOfStock.length === 0) {
+            if (outOfStock.length === 0) {
                 await batch.commit()
 
                 const orderRef = collection(dataBase, 'orders')
@@ -77,7 +77,7 @@ const Checkout = () => {
             console.log(error)
         } finally {
             setIsLoading(false)
-        }        
+        }
     }
 
     if (isLoading) {

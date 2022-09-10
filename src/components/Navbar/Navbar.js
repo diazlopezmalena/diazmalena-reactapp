@@ -7,14 +7,18 @@ const Navbar = () => {
 
     const [ menuMobile, setMenuMobile ] = useState('none')
     const [ closeMenuMobile, setCloseMenuMobile ] = useState('../images/menu.png')
+    const [ imgClassName, setImgClassName ] = useState('open')
 
     const showMenuHamburger = () => {
+
         if (menuMobile === 'none') {
             setMenuMobile('flex')
             setCloseMenuMobile('../images/cerrar.png')
+            setImgClassName('close')
         } else {
             setMenuMobile('none')
             setCloseMenuMobile('../images/menu.png')
+            setImgClassName('open')
         }
     }
 
@@ -36,7 +40,7 @@ const Navbar = () => {
                 <CartWidget />
             </div>
             <div className='navbarMenuMobile' >
-                <img src={closeMenuMobile} alt='Menú hamburguesa' onClick={()=>showMenuHamburger()}/>
+                <img src={closeMenuMobile} alt='Menú hamburguesa' className={imgClassName} onClick={()=>showMenuHamburger()}/>
                 <div className='navbarMenuMobileContent' style={{display: menuMobile}}>
                     <Link to='/category/ficcion'>Ficción</Link>
                     <Link to='/category/cronicas'>Crónicas</Link>

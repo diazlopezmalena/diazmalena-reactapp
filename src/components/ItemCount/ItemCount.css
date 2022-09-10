@@ -44,3 +44,24 @@
     border: solid 1px #232f3e;
     border-radius: 3px;
 }
+
+@media screen and (max-width:733px) {
+    .itemCount {
+        width: 60%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .itemCount {
+        width: 60%;
+        align-self: center;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:447px) {
+    .itemCount {
+        width: 97%;
+    }
+}

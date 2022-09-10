@@ -49,3 +49,31 @@
     font-size: 14px;
     text-align: center;
 }
+
+@media screen and (max-width:1000px) {
+    .itemDetail {
+        margin: 50px 15px;
+        gap: 30px;
+    }
+}
+
+
+@media screen and (max-width:695px) {
+    .itemDetail {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "img"
+                             "text";
+        margin: 50px 15px;
+        gap: 30px;
+    }
+
+    .itemDetailImg {
+        height: 200px;
+    }
+
+    .itemDetailText {
+        gap: 15px;
+    }
+
+}

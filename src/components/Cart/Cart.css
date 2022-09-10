@@ -129,3 +129,38 @@
 .emptyCart p {
     margin-bottom: 25px;
 }
+
+@media screen and (max-width:1001px) {
+    .cart {
+        width: 100%;
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width:557px) {
+    .cart {
+        width: 100%;
+
+    }
+
+    .itemInCart {
+        grid-template-rows: 1fr 1.5fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "name name delete"
+                             "quantity price price";
+    }
+
+    .itemInCartPrice {
+        justify-self: self-end;
+    }
+
+    .itemInCartName {
+        font-weight: 600;
+    }
+
+    .cartButtonBuy {
+        padding: 10px 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+}

@@ -38,3 +38,32 @@
     text-align: center;
     align-self: center;
 }
+
+@media screen and (max-width:1001px) {
+    .formText {
+        padding: 0 15px;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .form button {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:557px) {
+    .formText {
+        padding: 0 15px;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .form button {
+        padding: 10px;
+        width: 70%;
+    }
+}
